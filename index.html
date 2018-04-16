@@ -1,12 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+
+<meta http-equiv=\"content-type\" content=\"text/html; charset=utf-8\">
+<title>Open Server</title>
 </head>
 <body>
-    <div>
-        <iframe src="//player.vimeo.com/video/219325549"> </iframe>
-    </div>
+
+<div id='demo'> </div>
+<script>
+
+
+
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId            : '2024752814515140',
+      autoLogAppEvents : true,
+      xfbml            : true,
+      version          : 'v2.12'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src ='https://connect.facebook.net/en_US/sdk.js';
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+
+<script>
+document.getElementById('demo').innerHTML = 'Hello JavaScript!';
+</script>
 </body>
 </html>
