@@ -19,6 +19,20 @@
       xfbml            : true,
       version          : 'v2.12'
     });
+    FB.ui(
+  {
+    method: 'share',
+    href: 'https://developers.facebook.com/docs/',
+  },
+  // callback
+  function(response) {
+    if (response &amp;&amp; !response.error_message) {
+      alert('Posting completed.');
+    } else {
+      alert('Error while posting.');
+    }
+  }
+);
   };
 
   (function(d, s, id){
